@@ -1,0 +1,48 @@
+[project]
+name = "python-training"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "AmirMahdiPoursharif", email = "poursharif1386@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[[tool.uv.index]]
+name = "devneeds_mirror"
+url = "https://mirror-pypi.runflare.com/simple"
+default = true
+
+[dependency-groups]
+dev = [
+    "coverage>=7.16.2",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-ra"
