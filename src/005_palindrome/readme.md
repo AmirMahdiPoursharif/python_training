@@ -126,7 +126,7 @@ pytest tests/test_palindrome.py
 برای اجرای تست‌های چالش به‌صورت دستی، از دستور زیر استفاده کنید:
 
 ```bash
-uv run pytest src/basics/005_palindrome/palindrome/tests/palindrome_challenges.py
+uv run pytest src/005_palindrome/palindrome/tests/palindrome_challenges.py
 ```
 
 این دستور را از ریشه تمرین اجرا کنید؛ اگر فایل در مسیر دیگری قرار دارد، مسیر آن را اصلاح کنید.

@@ -91,7 +91,7 @@
 برای اجرای تست‌های چالش به‌صورت دستی، از دستور زیر استفاده کنید:
 
 ```bash
-uv run pytest src/basics/003_vowel_counter/vowel_counter/tests/vowel_counter_challenges.py
+uv run pytest src/003_vowel_counter/vowel_counter/tests/vowel_counter_challenges.py
 ```
 
 اگر تست‌ها را به پوشه `tests` منتقل کرده‌اید، دستور را از ریشه پروژه یا مسیری اجرا کنید که مسیر فوق نسبت به آن معتبر باشد.
