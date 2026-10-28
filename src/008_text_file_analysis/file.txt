@@ -1,0 +1,14 @@
+Python is a programming language that is easy to read and easy to learn.
+It was created by Guido van Rossum and first released in 1991.
+Many people choose Python as their first language because the syntax is clean.
+
+Python is used in web development, data analysis, automation, and artificial intelligence.
+Large companies use it every day to build reliable and extraordinarily useful tools.
+
+A good programmer is not someone who memorizes everything.
+A good programmer knows how to break a big problem into small pieces,
+solve each piece carefully, and test the result again and again.
+
+Practice is the most important part of learning.
+Write small programs, make mistakes, read the error messages, and try again.
+Every mistake is a lesson, and every lesson makes you a better developer.
