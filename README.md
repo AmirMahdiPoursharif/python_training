@@ -55,9 +55,8 @@ python_training/
 
 نکته‌ها:
 
-- پوشه‌های تمرین با یک شماره‌ی سه‌رقمی شروع می‌شوند (`001` تا `008`).
+- پوشه‌های تمرین با یک شماره‌ی سه‌رقمی شروع می‌شوند.
 - پوشه‌ی داخلی هر تمرین، پکیج پایتون همان تمرین است (مثلاً `temperature_conversion`).
-- تعداد و نام فایل‌های تست در تمرین‌های مختلف کمی متفاوت است؛ تمرین ۴ فایل تست را در ریشه‌ی پکیج دارد و تمرین‌های ۷ و ۸ هنوز تست ندارند. جزئیات در [جدول تمرین‌ها](#جدول-تمرینها) آمده است.
 
 ---
 
@@ -77,36 +76,6 @@ uv --version
 git --version
 ```
 
-### نصب uv
-
-اگر `uv` نصب نیست، یکی از روش‌های زیر را استفاده کنید.
-
-ویندوز (PowerShell):
-
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-مک و لینوکس:
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-روش جایگزین با pip/pipx:
-
-```bash
-pip install uv
-# یا
-pipx install uv
-```
-
-بعد از نصب، ترمینال را ببندید و دوباره باز کنید تا `uv` در `PATH` شناخته شود. سپس با `uv --version` بررسی کنید.
-
-> لازم نیست پایتون را دستی نصب کنید؛ `uv` نسخه‌ی خواسته‌شده در `.python-version` (یعنی ۳.۱۰) را خودش دانلود و مدیریت می‌کند. پروژه روی هر نسخه‌ی **۳.۱۰ و بالاتر** اجرا می‌شود.
-
----
-
 ## ۱. دریافت پروژه (Clone)
 
 پروژه را از GitHub دریافت کنید:
@@ -118,8 +87,8 @@ cd python_training
 
 ### شاخه‌ها
 
-- `main`: شاخه‌ی پیش‌فرض مخزن.
-- `dev`: کامل‌ترین وضعیت (شامل تمرین‌های ۷ و ۸).
+- `main`
+- `dev` 
 
 برای دیدن شاخه‌ها:
 
@@ -196,19 +165,20 @@ deactivate
 
 ## ۳. اجرای برنامه‌ها
 
-هر تمرین یک فایل `main.py` دارد که نقطه‌ی شروع برنامه است. از ریشه‌ی پروژه:
+هر تمرین یک فایل `main.py` دارد که نقطه‌ی شروع برنامه است. از پوشه تمرین :
 
 ```bash
-uv run python src/002_average_grades/average_grades/main.py
+cd .\src\007_caesar_cipher\ 
+uv run python -m caesar_cipher.main
 ```
 
 
 نمونه برای چند تمرین:
 
 ```bash
-uv run python src/001_temperature_conversion/temperature_conversion/main.py
-uv run python src/005_palindrome/palindrome/main.py
-uv run python src/008_text_file_analysis/text_file_analysis/main.py
+uv run python -m temperature_conversion.main
+uv run python -m palindrome.main
+uv run python -m text_file_analysis.main
 ```
 
 با اجرای این دستور، برنامه‌ی همان تمرین اجرا می‌شود و اگر پیاده‌سازی نشده باشد، فقط کار خاصی انجام نمی‌دهد (`main` خالی است).
